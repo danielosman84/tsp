@@ -23,6 +23,42 @@ export default function Home() {
         <p className="mt-6 italic text-xl text-gray-800 font-script">Putting You In The Driving Seat</p>
       </section>
 
+      {/* Empowering Drive Section */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+          <div className="w-full h-64 bg-gray-200 rounded" />
+          <div>
+            <h2 className="text-3xl font-bold mb-4">
+              TSP Vehicle Solutions: Empowering Your Drive!
+            </h2>
+            <p className="mb-4">
+              At TSP, we&rsquo;re not just redefining mobility; we&rsquo;re putting YOU in the driver&rsquo;s seat of innovation. Buckle up for a journey where flexibility meets mastery, and your success is our destination.
+            </p>
+            <p className="mb-6 font-semibold">
+              "Complete the Contact Form for a Swift Response – Your Solution is Just a Click Away!"
+            </p>
+            <Link href="/contact" className="bg-black text-white px-6 py-3 rounded-md inline-block">
+              Get in touch
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Benefits of Flexible Hire</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="text-center">
+                <div className="h-16 w-16 bg-gray-200 mx-auto mb-4 rounded-full" />
+                <p className="text-gray-700">Benefit description</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Global footer is rendered in _app */}
     </main>
   );
