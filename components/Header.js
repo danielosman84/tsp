@@ -12,7 +12,6 @@ export default function Header() {
         <nav className="hidden md:flex space-x-6">
           <Link href="/">Home</Link>
           <Link href="/flexi-hire">Flex Hire</Link>
-          <Link href="/products">Products</Link>
           <Link href="/daily">Daily Hire</Link>
           <Link href="/about">About Us</Link>
           <Link href="/blog">Blog</Link>
