@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white py-12 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-2">Rouleur Co.</h3>
+          <h3 className="text-xl font-bold mb-2">TSP Vehicle Solutions</h3>
           <p className="text-gray-400">© {new Date().getFullYear()} All rights reserved.</p>
         </div>
         <nav className="space-y-2">
@@ -14,8 +14,7 @@ export default function Footer() {
           <Link href="/contact">Contact</Link>
         </nav>
         <div>
-          <p>Follow us:</p>
-          {/* Add social links/icons here */}
+          <p>Phone: 01793 550340</p>
         </div>
       </div>
     </footer>
