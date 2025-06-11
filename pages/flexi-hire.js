@@ -1,5 +1,7 @@
 import { Card, CardContent } from "../components/ui/card";
+import { Button } from "../components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import Meta from "../components/Meta";
 
 export default function FlexiHire() {
@@ -39,7 +41,12 @@ export default function FlexiHire() {
                 className="mx-auto mb-4"
               />
               <h2 className="text-xl font-semibold mb-2">{product}</h2>
-              <p>Flexible hire available for {product.toLowerCase()}.</p>
+              <p className="mb-4">
+                Flexible hire available for {product.toLowerCase()}.
+              </p>
+              <Link href="/contact" passHref>
+                <Button className="bg-black text-white">Request more info</Button>
+              </Link>
             </CardContent>
           </Card>
         ))}
