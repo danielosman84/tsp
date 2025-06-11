@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -7,9 +8,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 bg-white z-50 border-b shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" scroll className="text-xl font-bold">
-          Rouleur Co.
-        </Link>
+        <div className="flex items-center space-x-4">
+          <Image src="/logo.png" alt="TSP Logo" width={100} height={50} />
+          <span className="font-bold text-xl">TSP Vehicle Solutions</span>
+        </div>
 
         <button
           className="md:hidden focus:outline-none"
@@ -35,17 +37,19 @@ export default function Header() {
         </button>
 
         <nav className="hidden md:flex space-x-6">
-          <Link href="/services">Services</Link>
-          <Link href="/case-studies">Case Studies</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/">Home</Link>
+          <Link href="/services">Flex Hire</Link>
+          <Link href="/daily">Daily Hire</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/faq">FAQ</Link>
         </nav>
 
         <Link
-          href="/book"
+          href="/contact"
           className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800"
         >
-          Book a Call
+          01793 550340
         </Link>
       </div>
 
@@ -55,17 +59,23 @@ export default function Header() {
         className={`${open ? 'block' : 'hidden'} md:hidden bg-white border-b shadow-sm`}
       >
         <div className="px-4 py-4 space-y-2">
-          <Link href="/services" className="block" onClick={() => setOpen(false)}>
-            Services
+          <Link href="/" className="block" onClick={() => setOpen(false)}>
+            Home
           </Link>
-          <Link href="/case-studies" className="block" onClick={() => setOpen(false)}>
-            Case Studies
+          <Link href="/services" className="block" onClick={() => setOpen(false)}>
+            Flex Hire
+          </Link>
+          <Link href="/daily" className="block" onClick={() => setOpen(false)}>
+            Daily Hire
           </Link>
           <Link href="/about" className="block" onClick={() => setOpen(false)}>
-            About
+            About Us
           </Link>
-          <Link href="/contact" className="block" onClick={() => setOpen(false)}>
-            Contact
+          <Link href="/blog" className="block" onClick={() => setOpen(false)}>
+            Blog
+          </Link>
+          <Link href="/faq" className="block" onClick={() => setOpen(false)}>
+            FAQ
           </Link>
         </div>
       </nav>
