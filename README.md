@@ -4,6 +4,7 @@ This repository is a reusable template for building fast, secure, SEO-optimized 
 
 Built with:
 - ✅ [Next.js](https://nextjs.org/) – React-based framework
+- ✅ [TypeScript](https://www.typescriptlang.org/) – Static typing for maintainability
 - ✅ [Tailwind CSS](https://tailwindcss.com/) – Utility-first styling
 - ✅ [Vercel](https://vercel.com/) – Seamless deployment platform
 
