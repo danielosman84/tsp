@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --bg: #f5f8fc;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: #101827;
+}
+
+.proto-shell { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.proto-header { background: linear-gradient(120deg, color-mix(in oklab, var(--brand), white 82%), #fff); border-radius: 20px; padding: 22px; box-shadow: 0 10px 30px rgba(14, 30, 70, 0.08); }
+.proto-logo { font-weight: 800; color: var(--brand-dark); text-decoration: none; }
+.proto-header nav { display: flex; flex-wrap: wrap; gap: 14px; margin: 14px 0; }
+.proto-header nav a { text-decoration: none; color: #1f2937; font-weight: 600; }
+.proto-cta { background: var(--brand); color: white; padding: 10px 14px; border-radius: 10px; text-decoration: none; display: inline-block; }
+.proto-header-copy h1 { margin: 10px 0 6px; font-size: clamp(1.6rem, 4vw, 2.3rem); }
+.proto-header-copy p { margin: 0; color: #334155; max-width: 70ch; }
+
+.proto-hero, .proto-section, .proto-cta-block, .proto-sidebar { background: #fff; border-radius: 16px; padding: 24px; margin-top: 18px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }
+.proto-hero h2 { margin-top: 0; }
+.proto-hero ul { padding-left: 20px; display: grid; gap: 8px; }
+
+.proto-trust { margin-top: 18px; background: #fff; border-radius: 14px; padding: 14px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; box-shadow: 0 8px 24px rgba(15,23,42,.05); }
+.proto-trust span { background: color-mix(in oklab, var(--brand), white 92%); border-radius: 10px; padding: 10px; font-weight: 600; }
+
+.proto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.proto-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; text-decoration: none; color: inherit; }
+.proto-card h4 { margin: 0 0 8px; }
+.proto-card.selector strong { display: block; margin-bottom: 8px; }
+
+.proto-two-col { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; align-items: start; }
+.proto-sidebar { position: sticky; top: 12px; }
+.proto-sidebar h4 { margin-top: 0; }
+.proto-sidebar p { margin: 4px 0; }
+
+.proto-faq { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
+.proto-inline-link { color: var(--brand-dark); font-weight: 700; }
+.proto-iframe-wrap { border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+.proto-footer { text-align: center; color: #64748b; padding: 20px 0 10px; font-size: .9rem; }
+
+@media (max-width: 900px) { .proto-two-col { grid-template-columns: 1fr; } .proto-sidebar { position: static; } }
